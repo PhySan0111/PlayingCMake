@@ -1,0 +1,3 @@
+// the configured options and settings for MyMain
+#define MyMain_VERSION_MAJOR @MyMain_VERSION_MAJOR@
+#define MyMain_VERSION_MINOR @MyMain_VERSION_MINOR@
