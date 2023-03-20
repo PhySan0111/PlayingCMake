@@ -1,3 +1,6 @@
 // the configured options and settings for MyMain
 #define MyMain_VERSION_MAJOR @MyMain_VERSION_MAJOR@
 #define MyMain_VERSION_MINOR @MyMain_VERSION_MINOR@
+
+//define option use of MathFunctions library
+#cmakedefine USE_MY_MATH

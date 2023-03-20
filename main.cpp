@@ -2,7 +2,11 @@
 #include <concepts>
 
 #include "MainConfig.h"
+
+//Use MathFunctions only if set USE_MY_MATH
+#ifdef USE_MY_MATH
 #include "MathFunctions.h"
+#endif
 
 template <typename T>
 T adder(T a, T b) requires std::is_arithmetic_v<T> && (!std::same_as<T, char>)
@@ -20,8 +24,11 @@ int main(int argc, char* argv[])
   }
 
   auto res_adder = adder(1.3, 3.0);
-  auto res_subtracter = mathfunctions::subtracter(3, 1);
   std::cout << "adder = " << res_adder << "\n";
-  std::cout << "subtracter = " << res_subtracter << "\n";
+
+  #ifdef USE_MY_MATH
+    auto res_subtracter = mathfunctions::subtracter(3, 1);
+    std::cout << "subtracter = " << res_subtracter << "\n";
+  #endif
   return 0;
 }
