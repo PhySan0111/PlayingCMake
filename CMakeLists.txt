@@ -21,7 +21,6 @@ if(USE_MY_MATH)
     # add the MathFunctions library to get built
     add_subdirectory(MathFunctions)
     list(APPEND EXTRA_LIBS MathFunctions)
-    list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/MathFunctions")
 endif()
 
 #link the target library to the executable
@@ -31,6 +30,5 @@ target_link_libraries(MyMain PUBLIC ${EXTRA_LIBS})
 # so that we will find TutorialConfig.h
 target_include_directories(MyMain PUBLIC
                            "${PROJECT_BINARY_DIR}"
-                           ${EXTRA_INCLUDES}
                            )
 
